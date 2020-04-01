@@ -1,4 +1,4 @@
-*. *::before, *::after {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -48,21 +48,15 @@ a:focus {
 }
 
 
-.page-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.intro {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 header {
     width: 100%;
     background: #92DFF1;
     text-align: center;
     padding: 4em 0;
+}
+
+.intro {
+    width: 100%;
 }
 
 .summary {
@@ -75,18 +69,17 @@ header {
 }
 
 .preamble {
-    width: 100%;
     margin: 0 auto;
     background: #efefef;
-    padding: 3em 6em;
-    columns: 30ch auto;
+    padding: 3em 2em;
     margin-bottom: 4em;
+
+    columns: 20em;
 }
 
 .preamble h3 {
-    font-size: 4rem;
+    text-align: center;
     column-span: all;
-    text-align: center;;
 }
 
 .preamble p {
@@ -94,17 +87,27 @@ header {
 }
 
 .main {
-    width: 50%;
-    margin-right: 3em;
-    margin-left: auto;
+    padding: 2rem;
 }
 
 .sidebar {
-    margin-right: auto;
-    width: 30%;
     background: #92DFF1;
     padding: 2em;
-    align-self: start;
 }
 
-
+@media (min-width: 900px) {
+    .page-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .main {
+        width: 50%;
+        margin-left: auto;
+    }
+    
+    .sidebar {
+        width: 30%;
+        margin-right: auto;
+    }
+}
